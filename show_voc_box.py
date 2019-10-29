@@ -24,12 +24,13 @@ def main():
 	    for member in root.findall('object'):
 		### note: member[?] based on .xml
 		xmin = int(member[4][0].text)    
-		ymin = int(float(member[4][1].text)) 
+		ymin = int(member[4][1].text) 
 		xmax = int(member[4][2].text)  
-		ymax = int(member[4][3].text)    
+		ymax = int(member[4][3].text) 
+		class_name = member[0].text
 		print("box value:",xmin,ymin,xmax,ymax)
 		cv2.rectangle(image, (xmin, ymin), (xmax, ymax),(0, 0, 255), 2)
-		cv2.putText(image, 'person', (xmin+15, ymin+15), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
+		cv2.putText(image, class_name, (xmin+15, ymin+15), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
 		cv2.namedWindow("result", cv2.WINDOW_NORMAL)
 		#cv2.resizeWindow("result", 640, 480)
 		cv2.imshow("result", image)
