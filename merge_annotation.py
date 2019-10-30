@@ -8,14 +8,14 @@ from PIL import Image
 import shutil
 
 # caltech图像的存储位置
-src_img_dir = "/opt/project/YOLO-master/darknet/results/cup_phone_face/cup"
+src_img_dir = "/zhihui/DMS/darknet/results/new_add_phone/JPEGImages"
 
 #保存为VOC 数据集的原图和xml标注路径
-new_img= "/opt/project/YOLO-master/darknet/results/cup_phone_face/new_img"
-new_xml = "/opt/project/YOLO-master/darknet/results/cup_phone_face/new_ann"
+new_img= "/zhihui/DMS/darknet/results/new_add_phone/new_img"
+new_xml = "/zhihui/DMS/darknet/results/new_add_phone/new_ann"
 
-cup_xml = "/opt/project/YOLO-master/darknet/results/cup_phone_face/Annotations-phone_cup"
-face_xml = "/opt/project/YOLO-master/darknet/results/cup_phone_face/Annotations-face"
+cup_xml = "/zhihui/DMS/darknet/results/new_add_phone/Annotations"
+face_xml = "/zhihui/DMS/darknet/results/new_add_phone/Annotations_face"
 if not os.path.isdir(new_img):
 	os.makedirs(new_img)
     

@@ -26,13 +26,9 @@ def main():
 		xmin = int(member[4][0].text)    
 		ymin = int(member[4][1].text) 
 		xmax = int(member[4][2].text)  
-<<<<<<< HEAD
 		ymax = int(member[4][3].text) 
-		class_name = member[0].text
-=======
-		ymax = int(member[4][3].text)
-		class_name = member[0].text    
->>>>>>> 8502ba475fe7d257d0ec86a1426a3d2f8bd63576
+		class_name = member[0].text 
+
 		print("box value:",xmin,ymin,xmax,ymax)
 		cv2.rectangle(image, (xmin, ymin), (xmax, ymax),(0, 0, 255), 2)
 		cv2.putText(image, class_name, (xmin+15, ymin+15), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
