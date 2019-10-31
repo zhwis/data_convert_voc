@@ -23,10 +23,10 @@ def main():
 	    print("image name:", root.find('filename').text)
 	    for member in root.findall('object'):
 		### note: member[?] based on .xml
-		xmin = int(member[4][0].text)    
-		ymin = int(member[4][1].text) 
-		xmax = int(member[4][2].text)  
-		ymax = int(member[4][3].text) 
+		xmin = int(member[4][0].text if len(member)>4 else member[1][0].text)    
+		ymin = int(member[4][1].text if len(member)>4 else member[1][1].text) 
+		xmax = int(member[4][2].text if len(member)>4 else member[1][2].text)  
+		ymax = int(member[4][3].text if len(member)>4 else member[1][3].text)  
 		class_name = member[0].text 
 
 		print("box value:",xmin,ymin,xmax,ymax)

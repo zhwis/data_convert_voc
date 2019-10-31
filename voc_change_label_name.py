@@ -22,6 +22,8 @@ def main():
 				label.text = "phone"
 			elif label.text == "4":
 				label.text = "drink"
+			else:
+				print("have not this classname:", txt_name)
 		tree.write(os.path.join(args.new_anno_dir, txt_name))
 
 if __name__=='__main__':
